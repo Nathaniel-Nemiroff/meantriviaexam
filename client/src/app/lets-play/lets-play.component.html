@@ -1,0 +1,23 @@
+Hi {{user}}
+<p>Choose an answer for each of the questions and submit the test once done.</p>
+<p>Good luck!</p>
+<form (submit)='submitGame($event)' *ngIf='go'>
+
+		<br>{{Questions[0].question}}<br>
+		<input type=radio name=q0 value='1' [(ngModel)]='q0'>{{Questions[0].correct}}<br>
+		<input type=radio name=q0 value='0' [(ngModel)]='q0'>{{Questions[0].fakeone}}<br>
+		<input type=radio name=q0 value='-1' [(ngModel)]='q0'>{{Questions[0].faketwo}}<br>
+
+		<br>{{Questions[1].question}}<br>
+		<input type=radio name=q1 value='1' [(ngModel)]='q1'>{{Questions[1].correct}}<br>
+		<input type=radio name=q1 value='0' [(ngModel)]='q1'>{{Questions[1].fakeone}}<br>
+		<input type=radio name=q1 value='-1' [(ngModel)]='q1'>{{Questions[1].faketwo}}<br>
+
+		<br>{{Questions[2].question}}<br>
+		<input type=radio name=q2 value='1' [(ngModel)]='q2'>{{Questions[2].correct}}<br>
+		<input type=radio name=q2 value='0' [(ngModel)]='q2'>{{Questions[2].fakeone}}<br>
+		<input type=radio name=q2 value='-1' [(ngModel)]='q2'>{{Questions[2].faketwo}}<br>
+
+	<button (click)='cancel()'>Cancel</button>
+	<input type=submit>
+</form>

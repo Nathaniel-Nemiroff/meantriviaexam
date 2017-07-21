@@ -1,0 +1,9 @@
+<h1>New Question</h1>
+<form (submit)='newQuestion()'>
+	Question: <input type=text name=question [(ngModel)]='question'><br>
+	Correct Answer: <input type=text name=correct [(ngModel)]='correct'><br>
+	Fake Answer 1: <input type=text name=fakeone [(ngModel)]='fakeone'><br>
+	Fake Answer 2: <input type=text name=faketwo [(ngModel)]='faketwo'><br>
+	<button (click)='cancel()'>Cancel</button>
+	<input type=submit value='Add Question'>
+</form>

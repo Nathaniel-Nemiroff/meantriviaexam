@@ -1,0 +1,6 @@
+<a [routerLink]="['/']">Home</a>
+<div *ngIf='user'>
+<a [routerLink]="['/new_question']">Add a Question</a>
+<a [routerLink]="['/logout']">Logout</a>
+</div>
+<router-outlet></router-outlet>

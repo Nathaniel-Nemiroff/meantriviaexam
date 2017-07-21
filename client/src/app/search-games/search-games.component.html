@@ -1,0 +1,9 @@
+<form (submit)='searchGames()'>
+	Search:<input type=text name=criteria [(ngModel)]='criteria'><br>
+</form>
+<table>
+	<th>Name</th><th>Score</th><th>Percentage</th>
+	<tr *ngFor='let game of Games'>
+		<td>{{game.user}}</td><td>{{game.Score}}/3</td><td>{{(game.Score/3)*100}}%</td>
+	</tr>
+</table>
